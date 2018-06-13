@@ -1,0 +1,10 @@
+<li class="list-group-item">
+  <img [src]="game.logo" alt="game-logo">
+  <div>
+    <steam-text>{{ game.name }}</steam-text>
+    <steam-text>
+      {{ game.genre }}
+      ( players: {{ game.playersCount }} )
+    </steam-text>
+  </div>
+</li>

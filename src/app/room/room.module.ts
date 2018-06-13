@@ -6,6 +6,8 @@ import { SharedModule } from './../shared/shared.module';
 import {
   ChosenGameComponent,
   GameInfoComponent,
+  GameItemComponent,
+  GamesListComponent,
   PlayersCountComponent,
   RoomComponent
 } from './components';
@@ -19,8 +21,10 @@ import {
   declarations: [
     ChosenGameComponent,
     GameInfoComponent,
+    GameItemComponent,
+    GamesListComponent,
     PlayersCountComponent,
-    RoomComponent
+    RoomComponent,
   ],
   exports: [
     RoomComponent
