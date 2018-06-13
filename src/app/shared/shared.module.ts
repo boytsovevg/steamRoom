@@ -9,6 +9,7 @@ import {
   DescriptionComponent,
   FilledCountComponent,
   GridComponent,
+  ImageComponent,
   TextComponent,
   TitleComponent
 } from './components';
@@ -26,6 +27,7 @@ import {
     DescriptionComponent,
     FilledCountComponent,
     GridComponent,
+    ImageComponent,
     TextComponent,
     TitleComponent,
   ],
@@ -37,6 +39,7 @@ import {
     DescriptionComponent,
     FilledCountComponent,
     GridComponent,
+    ImageComponent,
     TextComponent,
     TitleComponent,
   ]
