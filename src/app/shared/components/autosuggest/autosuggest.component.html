@@ -6,8 +6,10 @@
   type="text"
   class="form-control"
 />
+<!-- <object class="autosuggest__clear" type="image/svg+xml" data="image.svg"></object> -->
+<!-- <object class="autosuggest__magnifier" type="image/svg+xml" data="image.svg"></object> -->
 
-<ng-template #playerTemplate let-player="result" let-term="term">
+<ng-template #playerTemplate let-player="result">
   <img [src]="player.avatar" alt="avatar">
-  {{ player.nickname }}
+  <span>{{ player.nickname }}</span>
 </ng-template>

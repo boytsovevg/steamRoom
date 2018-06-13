@@ -33,6 +33,21 @@ export class AutosuggestComponent {
       nickname: 'pako',
       clan: 'winter',
       avatar: 'http://via.placeholder.com/50x50'
+    },
+    {
+      nickname: 'stalker',
+      clan: 'winter',
+      avatar: 'http://via.placeholder.com/50x50'
+    },
+    {
+      nickname: 'sandro',
+      clan: 'fobos',
+      avatar: 'http://via.placeholder.com/50x50'
+    },
+    {
+      nickname: 'benito',
+      clan: 'fobos',
+      avatar: 'http://via.placeholder.com/50x50'
     }
   ];
 
@@ -40,9 +55,9 @@ export class AutosuggestComponent {
   getPlayers = ($nickname: Observable<string>): Observable<Player[]> =>
 
     $nickname.pipe(
-      debounceTime(200),
+      debounceTime(500),
       distinctUntilChanged(),
-      map(text => text.length < 3 ? [] :
+      map(text => text.length < 2 ? [] :
         this.players.filter(player => player.nickname.includes(text))
       )
     )

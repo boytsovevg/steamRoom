@@ -1,6 +1,13 @@
 :host {
-    .form-control {
-        min-width: 300px;
-        padding: 10px 15px;
-    }
+    display: inline-block;
+    width: 100%;
+}
+
+.form-control {
+    min-width: 300px;
+    padding: 10px 15px;
+}
+
+::ng-deep .dropdown-menu {
+    padding: 0;
 }
