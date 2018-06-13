@@ -1,7 +1,9 @@
 <steam-title [title]="game.name"></steam-title>
 
 <div class="game-info">
-  <img [src]="game.logo" alt="game-logo">
+  <steam-image
+    [imageSource]="game.logo">
+  </steam-image>
   <game-info
     [description]="game.description"
     [genre]="game.genre">

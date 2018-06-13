@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, HostBinding } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Sizes, ImageTypes } from './../../enums';
 
 interface Size {
@@ -10,25 +10,29 @@ interface Size {
   selector: 'steam-image',
   styleUrls: ['./image.component.scss'],
   template: `
-    <img [src]="imageSource" alt="image">
+    <img [class]="imageClass"
+      [src]="imageSource" alt="image"
+      height="imageHeight"
+      width="imageWidth">
   `
 })
 export class ImageComponent implements OnInit {
 
   @Input() imageSource: string;
 
+  @Input() imageClass?: string;
   @Input() size?: Sizes = Sizes.md;
   @Input() type?: ImageTypes = ImageTypes.squared;
 
   @Input() width?: number;
   @Input() height?: number;
 
-  @HostBinding('img.attr.height') imageHeight;
-  @HostBinding('img.attr.width') imageWidth;
+  public imageHeight: number;
+  public imageWidth: number;
 
 
   public iconParameters: { size: Size };
-  private sizes: {
+  private sizes = {
     [Sizes.sm]: {
       height: 50,
       width: 50
@@ -62,14 +66,7 @@ export class ImageComponent implements OnInit {
       throw new Error('set width and height of custom type');
     }
 
-    let size;
-    try {
-      size = this.sizes[this.size];
-    } catch (e) {
-      throw new Error('set squared size');
-    }
-
-    return size;
+     return this.sizes[this.size];
   }
 
 }

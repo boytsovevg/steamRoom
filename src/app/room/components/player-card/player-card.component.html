@@ -1,5 +1,8 @@
 <div class="card">
-    <img class="card-img-top" [src]="player.avatar" alt="avatar">
+    <steam-image
+      imageClass="card-img-top"
+      [imageSource]="player.avatar">
+    </steam-image>
     <div class="card-body">
       <steam-text>{{ player.nickname }}</steam-text>
     </div>

@@ -11,6 +11,8 @@
 <!-- <object class="autosuggest__magnifier" type="image/svg+xml" data="image.svg"></object> -->
 
 <ng-template #playerTemplate let-player="result">
-  <img [src]="player.avatar" alt="avatar">
+  <steam-image
+    [imageSource]="player.avatar">
+  </steam-image>
   <span>{{ player.nickname }}</span>
 </ng-template>

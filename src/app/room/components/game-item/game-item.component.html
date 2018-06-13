@@ -1,5 +1,8 @@
 <li class="list-group-item">
-  <img [src]="game.logo" alt="game-logo">
+  <steam-image
+    [imageSource]="game.logo"
+  >
+  </steam-image>
   <div class="game__info">
     <steam-text>{{ game.name }}</steam-text>
     <steam-text>
