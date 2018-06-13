@@ -1,3 +1,4 @@
+export * from './autosuggest/autosuggest.component';
 export * from './description/description.component';
 export * from './filled-count/filled-count.component';
 export * from './text/text.component';

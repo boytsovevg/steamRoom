@@ -1,0 +1,13 @@
+<input
+  [(ngModel)]="chosenPlayer"
+  [ngbTypeahead]="getPlayers"
+  [focusFirst]="true"
+  [resultTemplate]="playerTemplate"
+  type="text"
+  class="form-control"
+/>
+
+<ng-template #playerTemplate let-player="result" let-term="term">
+  <img [src]="player.avatar" alt="avatar">
+  {{ player.nickname }}
+</ng-template>
