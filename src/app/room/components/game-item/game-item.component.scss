@@ -1,0 +1,12 @@
+.list-group-item {
+    min-width: 450px;
+    display: flex;
+    align-items: center;
+}
+
+.game__info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

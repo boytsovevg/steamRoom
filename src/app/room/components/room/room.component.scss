@@ -1,5 +1,20 @@
+section {
+    display: flex;
+}
+
 .room__item {
     margin-bottom: 30px;
+}
+
+.room__games {
+    width: 100%;
+    max-width: 450px;
+    margin-right: 30px;
+}
+
+.room__players {
+    width: 100%;
+    max-width: 450px;
 }
 
 steam-autosuggest {

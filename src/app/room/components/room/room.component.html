@@ -8,5 +8,12 @@
 </section>
 
 <section>
-    <games-list [games]="games"></games-list>
+    <div class="room__games">
+        <steam-text>Available games</steam-text>
+        <games-list [games]="games"></games-list>
+    </div>
+    <div class="room__players">
+        <steam-text>Players in room</steam-text>
+        <steam-grid></steam-grid>
+    </div>
 </section>

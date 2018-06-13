@@ -8,6 +8,7 @@ import {
   ButtonComponent,
   DescriptionComponent,
   FilledCountComponent,
+  GridComponent,
   TextComponent,
   TitleComponent
 } from './components';
@@ -24,6 +25,7 @@ import {
     ButtonComponent,
     DescriptionComponent,
     FilledCountComponent,
+    GridComponent,
     TextComponent,
     TitleComponent,
   ],
@@ -34,6 +36,7 @@ import {
     ButtonComponent,
     DescriptionComponent,
     FilledCountComponent,
+    GridComponent,
     TextComponent,
     TitleComponent,
   ]
