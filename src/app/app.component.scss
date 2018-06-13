@@ -1,0 +1,12 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    min-width: 960px;
+    padding: 20px 30px;
+    max-width: 100%;
+    border: 1px solid black;
+}
