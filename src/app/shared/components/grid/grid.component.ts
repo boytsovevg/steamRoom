@@ -1,12 +1,16 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'steam-grid',
-  templateUrl: './grid.component.html',
-  styleUrls: ['./grid.component.scss']
+  styleUrls: ['./grid.component.scss'],
+  template: `
+    <ng-content></ng-content>
+  `
 })
 export class GridComponent {
 
   @Input() grid: any[];
-  @Input() gap: number[];
+
+  @HostBinding('style.grid-gap')
+  @Input() gap?: number[];
 }

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Game, Genre } from '../../../core';
+import { Observable } from 'rxjs';
+import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
+
+import { Game, Genre, Player } from '../../../core';
 
 
 @Component({
@@ -10,6 +13,7 @@ import { Game, Genre } from '../../../core';
 export class RoomComponent implements OnInit {
 
   public games: Game[] = [];
+  public players: Player[] = [];
 
   ngOnInit() {
     this.games = [
@@ -49,6 +53,54 @@ export class RoomComponent implements OnInit {
         playersCount: 4
       }
     ];
+
+    this.players = [
+      {
+        nickname: 'stiker',
+        clan: 'winter',
+        avatar: 'http://via.placeholder.com/50x50'
+      },
+      {
+        nickname: 'nimp',
+        clan: 'winter',
+        avatar: 'http://via.placeholder.com/50x50'
+      },
+      {
+        nickname: 'pako',
+        clan: 'winter',
+        avatar: 'http://via.placeholder.com/50x50'
+      },
+      {
+        nickname: 'stalker',
+        clan: 'winter',
+        avatar: 'http://via.placeholder.com/50x50'
+      },
+      {
+        nickname: 'sandro',
+        clan: 'fobos',
+        avatar: 'http://via.placeholder.com/50x50'
+      },
+      {
+        nickname: 'benito',
+        clan: 'fobos',
+        avatar: 'http://via.placeholder.com/50x50'
+      }
+    ];
+  }
+
+  public selectPlayer(player: Player): void {
+    console.log(player);
+  }
+
+  public getPlayers = ($nickname: Observable<string>): Observable<Player[]> => {
+
+    return $nickname.pipe(
+      debounceTime(500),
+      distinctUntilChanged(),
+      map(text => text.length < 2 ? [] :
+        this.players.filter(player => player.nickname.includes(text))
+      )
+    );
   }
 
 }

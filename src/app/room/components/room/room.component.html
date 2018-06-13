@@ -3,7 +3,12 @@
 </section>
 
 <section class="room__item">
-    <steam-autosuggest></steam-autosuggest>
+    <steam-autosuggest
+        [items]="players"
+        [search]="getPlayers"
+        (onItemSelect)="selectPlayer($event)"
+    >
+    </steam-autosuggest>
     <steam-button>Play</steam-button>
 </section>
 
@@ -14,6 +19,11 @@
     </div>
     <div class="room__players">
         <steam-text>Players in room</steam-text>
-        <steam-grid></steam-grid>
+        <steam-grid>
+            <player-card
+                *ngFor="let player of players"
+                [player]="player">
+            </player-card>
+        </steam-grid>
     </div>
 </section>

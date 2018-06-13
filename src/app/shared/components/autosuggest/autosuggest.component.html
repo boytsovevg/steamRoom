@@ -1,7 +1,8 @@
 <input
-  [(ngModel)]="chosenPlayer"
-  [ngbTypeahead]="getPlayers"
+  [(ngModel)]="chosenItem"
+  [ngbTypeahead]="search"
   [focusFirst]="true"
+  (selectItem)="selectItem($event)"
   [resultTemplate]="playerTemplate"
   type="text"
   class="form-control"
