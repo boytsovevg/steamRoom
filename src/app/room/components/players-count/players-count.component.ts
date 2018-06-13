@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'players-count',
   templateUrl: './players-count.component.html',
   styleUrls: ['./players-count.component.scss']
 })
-export class PlayersCountComponent implements OnInit {
+export class PlayersCountComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  @Input() currentCount: number;
+  @Input() totalCount: number;
 }

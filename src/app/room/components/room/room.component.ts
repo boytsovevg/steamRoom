@@ -14,9 +14,19 @@ export class RoomComponent implements OnInit {
 
   public games: Game[] = [];
   public players: Player[] = [];
+  public chosenGame: Game;
 
   ngOnInit() {
+
     this.games = [
+      {
+        name: 'Heroes of Might and Magic III',
+        genre: Genre.RPG,
+        logo: 'http://via.placeholder.com/200x200',
+        description: 'NO description',
+        playersCount: 6
+      }
+      ,
       {
         name: 'Minecraft',
         genre: Genre.RPG,
@@ -86,6 +96,8 @@ export class RoomComponent implements OnInit {
         avatar: 'http://via.placeholder.com/50x50'
       }
     ];
+
+    this.chosenGame = this.games[0];
   }
 
   public selectPlayer(player: Player): void {
