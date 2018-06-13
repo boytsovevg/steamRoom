@@ -12,8 +12,8 @@ interface Size {
   template: `
     <img [class]="imageClass"
       [src]="imageSource" alt="image"
-      height="imageHeight"
-      width="imageWidth">
+      [height]="imageHeight"
+      [width]="imageWidth">
   `
 })
 export class ImageComponent implements OnInit {
@@ -34,12 +34,12 @@ export class ImageComponent implements OnInit {
   public iconParameters: { size: Size };
   private sizes = {
     [Sizes.sm]: {
-      height: 50,
-      width: 50
-    },
-    [Sizes.md]: {
       height: 100,
       width: 100
+    },
+    [Sizes.md]: {
+      height: 150,
+      width: 150
     },
     [Sizes.lg]: {
       height: 200,
