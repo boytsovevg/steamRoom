@@ -1,14 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { RoomComponent } from './room/room.component';
+import { SharedModule } from './../shared/shared.module';
+
+import {
+  ChosenGameComponent,
+  GameInfoComponent,
+  PlayersCountComponent,
+  RoomComponent
+} from './components';
 
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   declarations: [
+    ChosenGameComponent,
+    GameInfoComponent,
+    PlayersCountComponent,
     RoomComponent
   ],
   exports: [

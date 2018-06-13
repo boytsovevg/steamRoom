@@ -4,13 +4,13 @@
         "directive-selector": [
             true,
             "attribute",
-            "steam",
+            "",
             "camelCase"
         ],
         "component-selector": [
             true,
             "element",
-            "steam",
+            "",
             "kebab-case"
         ]
     }

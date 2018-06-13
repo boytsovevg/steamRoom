@@ -1,0 +1,10 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    steam-description {
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    flex-direction: column;
+
+    steam-title {
+        align-self: center;
+        margin-bottom: 30px;
+    }
+
+}
+
+.game-info {
+    display: flex;
+
+    game-info {
+        margin: 0 20px;
+    }
+
+    players-count {
+        align-self: center;
+    }
+}
