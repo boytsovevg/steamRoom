@@ -29,6 +29,10 @@ export class RoomComponent implements OnInit {
         this.chosenGame = this.games[0];
     }
 
+    public addPlayer(player: Player): void {
+        this.players.push(player);
+    }
+
     public selectPlayer(player: Player): void {
         console.log(player);
     }

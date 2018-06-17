@@ -3,17 +3,20 @@
   (keyup.enter)="getPlayerByName($event)"
 >
 
-<div>
-  <player-item *ngIf="player; else noResults"
+<div *ngIf="player"
+  class="player__results">
+  <player-item
     [player]="player"
   ></player-item>
+
   <steam-icon
-    type="action"
     name="add"
+    type="action"
+    (click)="addPlayer()"
   >
   </steam-icon>
 </div>
 
-<ng-template #noResults>
-  No results
-</ng-template>
+<div *ngIf="noResults">
+  No player found
+</div>

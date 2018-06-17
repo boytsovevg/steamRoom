@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, AfterContentInit } from '@angular/core';
+import { Component, Input, AfterContentInit } from '@angular/core';
 import { IconTypes, Sizes } from '../../enums';
 import { Size } from '../../models';
 

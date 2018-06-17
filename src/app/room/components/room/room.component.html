@@ -12,7 +12,9 @@
             <player-item [player]="player"></player-item>
         </ng-template>
     </steam-autosuggest> -->
-    <add-player></add-player>
+    <add-player
+        (onPlayerAdd)="addPlayer($event)"
+    ></add-player>
     <steam-button>Play</steam-button>
 </section>
 

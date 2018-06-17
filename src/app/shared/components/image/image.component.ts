@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, AfterContentInit } from '@angular/core';
 import { Sizes, ImageTypes } from './../../enums';
 import { Size } from '../../models';
 
@@ -12,7 +12,7 @@ import { Size } from '../../models';
       [width]="imageWidth">
   `
 })
-export class ImageComponent implements OnInit {
+export class ImageComponent implements AfterContentInit {
 
   @Input() imageSource: string;
 
@@ -47,7 +47,7 @@ export class ImageComponent implements OnInit {
     }
   };
 
-  ngOnInit() {
+  ngAfterContentInit() {
     const { width, height } = this.getSize();
     this.imageHeight = height;
     this.imageWidth = width;
