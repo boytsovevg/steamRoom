@@ -2,5 +2,7 @@ export enum ButtonTypes {
     primary = 'primary',
     simple = 'simple',
     ghost = 'ghost',
-    success = 'success'
+    success = 'success',
+    icon = 'icon',
+    buttonWithIcon = 'buttonWithIcon'
 }

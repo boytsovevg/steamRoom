@@ -9,6 +9,7 @@ import {
   DescriptionComponent,
   FilledCountComponent,
   GridComponent,
+  IconComponent,
   ImageComponent,
   TextComponent,
   TitleComponent
@@ -27,6 +28,7 @@ import {
     DescriptionComponent,
     FilledCountComponent,
     GridComponent,
+    IconComponent,
     ImageComponent,
     TextComponent,
     TitleComponent,
@@ -39,6 +41,7 @@ import {
     DescriptionComponent,
     FilledCountComponent,
     GridComponent,
+    IconComponent,
     ImageComponent,
     TextComponent,
     TitleComponent,

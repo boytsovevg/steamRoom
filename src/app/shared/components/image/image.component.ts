@@ -1,10 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Sizes, ImageTypes } from './../../enums';
-
-interface Size {
-  width: number;
-  height: number;
-}
+import { Size } from '../../models';
 
 @Component({
   selector: 'steam-image',
