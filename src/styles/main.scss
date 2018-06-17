@@ -1,3 +1,5 @@
+@import './variables';
+
 // Responsive fonts
 :root {
     font-size: 12px;
@@ -19,4 +21,8 @@
     :root {
       font-size: 18px;
     }
+}
+
+body {
+    background-color: $background-black;
 }
