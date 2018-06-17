@@ -1,15 +1,30 @@
+@import '../../../../styles/variables';
+
 :host {
     position: relative;
     display: inline-block;
     width: 100%;
 }
 
+
 .form-control {
     min-width: 300px;
     padding: 10px 15px;
 }
 
+steam-image {
+    margin-right: 10px;
+}
+
 ::ng-deep .dropdown-menu {
     width: 100%;
     padding: 0;
+
+    .dropdown-item {
+        cursor: pointer;
+
+        &.active {
+            background-color: $background-card;
+        }
+    }
 }
