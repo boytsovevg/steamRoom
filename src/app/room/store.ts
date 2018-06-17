@@ -6,7 +6,12 @@ export const STORE = {
             name: 'Heroes of Might and Magic III',
             genre: Genre.RPG,
             logo: 'http://via.placeholder.com/200x200',
-            description: 'NO description',
+            description: `Gameplay consists of strategic exploration on the world map and tactical turn-based combat.
+                As with the series in general, the player controls a number of "heroes" who act as generals and command troops
+                comprising various types of creatures inspired by myth and legend. The player can complete or "win" a map by completing
+                the objectives set out by the creator of the map. Objectives may include conquering all the towns in the map, gathering
+                a set amount of resources, or piecing together a puzzle to find the Grail artifact. If a player loses all their heroes
+                and towns, they will lose the game.`,
             playersCount: 6
         },
         {

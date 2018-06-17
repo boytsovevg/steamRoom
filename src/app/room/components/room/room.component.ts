@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 
 import { STORE } from '../../store';
-import { Game, Genre, Player } from '../../../core';
+import { Game, Player } from '../../../core';
 
 
 @Component({

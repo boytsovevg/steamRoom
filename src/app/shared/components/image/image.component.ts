@@ -33,6 +33,10 @@ export class ImageComponent implements OnInit {
 
   public iconParameters: { size: Size };
   private sizes = {
+    [Sizes.xs]: {
+      height: 50,
+      width: 50
+    },
     [Sizes.sm]: {
       height: 100,
       width: 100
