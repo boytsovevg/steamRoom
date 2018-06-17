@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, Input } from '@angular/core';
+import { Component, EventEmitter, Output, Input, ContentChild, TemplateRef } from '@angular/core';
 
 
 @Component({
@@ -10,9 +10,10 @@ export class AutosuggestComponent {
   public chosenItem: any;
 
   @Input() items: any[];
+  @Input() search: any;
   @Output() onItemSelect = new EventEmitter();
 
-  @Input() search: any;
+  @ContentChild(TemplateRef) resultItemTemplate;
 
   public selectItem({ item }): void {
     this.onItemSelect.emit(item);

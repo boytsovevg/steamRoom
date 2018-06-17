@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from './../shared/shared.module';
 
 import {
+  AddPlayerComponent,
   ChosenGameComponent,
   GameInfoComponent,
   GameItemComponent,
   GamesListComponent,
   PlayerCardComponent,
+  PlayerItemComponent,
   PlayersCountComponent,
   RoomComponent
 } from './components';
@@ -20,16 +22,18 @@ import {
     SharedModule
   ],
   declarations: [
+    AddPlayerComponent,
     ChosenGameComponent,
     GameInfoComponent,
     GameItemComponent,
     GamesListComponent,
+    PlayerItemComponent,
     PlayerCardComponent,
     PlayersCountComponent,
-    RoomComponent
+    RoomComponent,
   ],
   exports: [
-    RoomComponent
+    RoomComponent,
   ]
 })
 export class RoomModule { }

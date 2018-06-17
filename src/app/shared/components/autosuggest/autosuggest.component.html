@@ -3,17 +3,9 @@
   [ngbTypeahead]="search"
   [focusFirst]="true"
   (selectItem)="selectItem($event)"
-  [resultTemplate]="playerTemplate"
+  [resultTemplate]="resultItemTemplate"
   type="text"
   class="form-control"
 />
 <!-- <object class="autosuggest__clear" type="image/svg+xml" data="image.svg"></object> -->
 <!-- <object class="autosuggest__magnifier" type="image/svg+xml" data="image.svg"></object> -->
-
-<ng-template #playerTemplate let-player="result">
-  <steam-image
-    size="xs"
-    [imageSource]="player.avatar">
-  </steam-image>
-  <span>{{ player.nickname }}</span>
-</ng-template>

@@ -54,32 +54,44 @@ export const STORE = {
         {
             nickname: 'stiker',
             clan: 'winter',
-            avatar: 'http://via.placeholder.com/50x50'
+            avatar: {
+                small: 'http://via.placeholder.com/50x50'
+            }
         },
         {
             nickname: 'nimp',
             clan: 'winter',
-            avatar: 'http://via.placeholder.com/50x50'
+            avatar: {
+                small: 'http://via.placeholder.com/50x50'
+            }
         },
         {
             nickname: 'pako',
             clan: 'winter',
-            avatar: 'http://via.placeholder.com/50x50'
+            avatar: {
+                small: 'http://via.placeholder.com/50x50'
+            }
         },
         {
             nickname: 'stalker',
             clan: 'winter',
-            avatar: 'http://via.placeholder.com/50x50'
+            avatar: {
+                small: 'http://via.placeholder.com/50x50'
+            }
         },
         {
             nickname: 'sandro',
             clan: 'fobos',
-            avatar: 'http://via.placeholder.com/50x50'
+            avatar: {
+                small: 'http://via.placeholder.com/50x50'
+            }
         },
         {
             nickname: 'benito',
             clan: 'fobos',
-            avatar: 'http://via.placeholder.com/50x50'
+            avatar: {
+                small: 'http://via.placeholder.com/50x50'
+            }
         }
     ]
 };

@@ -1,0 +1,12 @@
+<input
+  type="text"
+  (keyup.enter)="getPlayerByName($event)"
+>
+
+<player-item *ngIf="player; else noResults"
+  [player]="player"
+></player-item>
+
+<ng-template #noResults>
+  No results
+</ng-template>
