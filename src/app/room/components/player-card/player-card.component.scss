@@ -1,0 +1,10 @@
+@import '../../../../styles/variables';
+
+.card {
+    background-color: $background-card;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: $shadow-card;
+    }
+}

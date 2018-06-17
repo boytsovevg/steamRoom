@@ -1,7 +1,16 @@
+@import '../../../../styles/variables';
+
 .list-group-item {
     min-width: 450px;
+    padding: 0;
     display: flex;
     align-items: center;
+    background-color: $background-card;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: $shadow-card;
+    }
 }
 
 .game__info {
