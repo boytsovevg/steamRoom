@@ -5,7 +5,6 @@ import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 import { STORE } from '../../store';
 import { Game, Player, PlayersDataService } from '../../../core';
 
-
 @Component({
     selector: 'steam-room',
     providers: [
@@ -30,6 +29,9 @@ export class RoomComponent implements OnInit {
     }
 
     public addPlayer(player: Player): void {
+        this.playersService.getPlayerGames(player.id)
+            .subscribe(games => this.games = games);
+
         this.players.push(player);
     }
 
