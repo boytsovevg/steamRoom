@@ -37,14 +37,14 @@ export const STORE = {
         },
         {
             name: 'Counter-Strike: Global Offensive',
-            genre: Genre.ACTION,
+            genre: Genre.Action,
             logo: 'http://via.placeholder.com/50x50',
             description: '',
             playersCount: 16
         },
         {
             name: 'Stronghold',
-            genre: Genre.STRATEGY,
+            genre: Genre.Strategy,
             logo: 'http://via.placeholder.com/50x50',
             description: '',
             playersCount: 4
