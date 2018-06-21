@@ -1,7 +1,7 @@
 import { Genre } from '../enums';
 
 export interface GameDetails {
-    appid: string;
+    id: number;
     name: string;
     developer: string;
     publisher: string;

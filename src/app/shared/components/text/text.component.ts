@@ -4,10 +4,14 @@ import { Component, HostBinding, Input } from '@angular/core';
   selector: 'steam-text',
   styleUrls: ['./text.component.scss'],
   template: `
-    <ng-content></ng-content>
+    <span [title]="title">
+      <ng-content></ng-content>
+    </span>
   `
 })
 export class TextComponent {
+
+  @Input() title?: string;
 
   @HostBinding('style.max-width')
   @Input() maxWidth?: string;

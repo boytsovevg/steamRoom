@@ -19,11 +19,11 @@
 </section>
 
 <section>
-    <div class="room__games">
+    <div class="room__games" *ngIf="games.length && players.length > 1">
         <steam-text>Available games</steam-text>
         <games-list [games]="games"></games-list>
     </div>
-    <div class="room__players">
+    <div class="room__players" *ngIf="players.length">
         <steam-text>Players in room</steam-text>
         <steam-grid>
             <player-card
