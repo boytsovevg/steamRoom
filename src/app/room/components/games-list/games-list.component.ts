@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Game } from '../../../core';
+import { GameItem } from '../../../core';
 
 @Component({
   selector: 'games-list',
@@ -8,5 +8,5 @@ import { Game } from '../../../core';
 })
 export class GamesListComponent {
 
-  @Input() games: Game[];
+  @Input() games: GameItem[];
 }

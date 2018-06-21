@@ -1,17 +1,18 @@
 <li class="list-group-item">
   <steam-image
-    size="sm"
-    [imageSource]="game.icon"
+    type="custom"
+    width="200"
+    height="100"
+    [imageSource]="game.logo"
   >
   </steam-image>
   <div class="game__info">
     <steam-text
       [title]="game.name"
-      maxWidth="300px"
+      maxWidth="230px"
     >{{ game.name }}</steam-text>
     <steam-text>
-      {{ game.genre }}
-      ( players: {{ game.playersCount }} )
+      {{ genre }}
     </steam-text>
   </div>
 </li>

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, AfterContentInit } from '@angular/core';
+import { Component, Input, AfterContentInit } from '@angular/core';
 import { Sizes, ImageTypes } from './../../enums';
 import { Size } from '../../models';
 
@@ -16,9 +16,9 @@ export class ImageComponent implements AfterContentInit {
 
   @Input() imageSource: string;
 
-  @Input() imageClass?: string;
+  @Input() imageClass = '';
   @Input() size?: Sizes = Sizes.md;
-  @Input() type?: ImageTypes = ImageTypes.squared;
+  @Input() type?: ImageTypes | string = ImageTypes.squared;
 
   @Input() width?: number;
   @Input() height?: number;
@@ -26,8 +26,6 @@ export class ImageComponent implements AfterContentInit {
   public imageHeight: number;
   public imageWidth: number;
 
-
-  public iconParameters: { size: Size };
   private sizes = {
     [Sizes.xs]: {
       height: 50,

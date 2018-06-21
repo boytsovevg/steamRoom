@@ -33,14 +33,13 @@ export class RoomComponent implements OnInit {
     public addPlayer(player: Player): void {
         this.playersService.getPlayerGames(player.id)
             .subscribe((games: Game[]) => {
-                this.games = this.getGames(games);
-                console.log(this.games);
+                this.games = this.getFilteredGames(games);
             });
 
             this.players.push(player);
     }
 
-    private getGames(games: Game[]): Game[] {
+    private getFilteredGames(games: Game[]): Game[] {
         if (this.games.length) {
             const filteredGames = games.filter(game => this.gamesMap.has(game.id));
             this.updateGameMap(filteredGames);
@@ -55,14 +54,15 @@ export class RoomComponent implements OnInit {
 
     private updateGameMap(games): void {
         this.gamesMap = new Map<number, Game>();
+
         for (const game of games) {
             this.gamesMap.set(game.id, game);
         }
     }
 
-    public selectPlayer(player: Player): void {
-        console.log(player);
-    }
+    // public selectPlayer(player: Player): void {
+    //     console.log(player);
+    // }
 
     public getPlayers = ($nickname: Observable<string>): Observable<Player[]> => {
 

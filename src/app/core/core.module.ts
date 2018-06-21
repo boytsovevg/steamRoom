@@ -2,7 +2,7 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
-import { PlayersDataService } from './data-services';
+import { GamesDataService, PlayersDataService } from './data-services';
 
 @NgModule({
   imports: [
@@ -10,6 +10,7 @@ import { PlayersDataService } from './data-services';
     HttpClientModule
   ],
   providers: [
+    GamesDataService,
     PlayersDataService
   ],
 })
@@ -19,6 +20,7 @@ export class CoreModule {
     return {
       ngModule: CoreModule,
       providers: [
+        GamesDataService,
         PlayersDataService
       ]
     };
