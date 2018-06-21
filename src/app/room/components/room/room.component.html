@@ -4,15 +4,6 @@
 </section>
 
 <section class="room__item">
-    <!-- <steam-autosuggest
-        [items]="players"
-        [search]="getPlayers"
-        (onItemSelect)="selectPlayer($event)"
-    >
-        <ng-template let-player="result">
-            <player-item [player]="player"></player-item>
-        </ng-template>
-    </steam-autosuggest> -->
     <add-player
         (onPlayerAdd)="addPlayer($event)"
     ></add-player>
