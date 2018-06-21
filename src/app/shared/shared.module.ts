@@ -10,6 +10,7 @@ import {
   FilledCountComponent,
   GridComponent,
   IconComponent,
+  InputComponent,
   ImageComponent,
   TextComponent,
   TitleComponent
@@ -29,6 +30,7 @@ import {
     FilledCountComponent,
     GridComponent,
     IconComponent,
+    InputComponent,
     ImageComponent,
     TextComponent,
     TitleComponent,
@@ -42,6 +44,7 @@ import {
     FilledCountComponent,
     GridComponent,
     IconComponent,
+    InputComponent,
     ImageComponent,
     TextComponent,
     TitleComponent,

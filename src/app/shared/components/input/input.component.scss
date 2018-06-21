@@ -1,0 +1,13 @@
+@import '../../../../styles/variables';
+
+.form-control {
+    padding: 10px 15px;
+    border-color: #1b2838;
+    background-color: #2A2F36;
+    color: $font-green;
+
+    &:focus {
+        border-color: $border-color;
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, .5);
+    }
+}

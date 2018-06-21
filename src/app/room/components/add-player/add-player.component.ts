@@ -25,6 +25,7 @@ export class AddPlayerComponent {
                     return;
                 }
 
+                this.noResults = false;
                 this.player = player;
             });
     }
