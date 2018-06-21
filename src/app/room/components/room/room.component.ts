@@ -19,20 +19,45 @@ export class RoomComponent implements OnInit {
     public players: Player[] = [];
     public chosenGame: Game;
 
+    private gamesMap: Map<number, Game> = new Map<number, Game>();
+
     constructor(private playersService: PlayersDataService) {}
 
     ngOnInit() {
 
-        this.games = STORE.games;
+        // this.games = STORE.games;
         this.players = STORE.players;
-        this.chosenGame = this.games[0];
+        // this.chosenGame = this.games[0];
     }
 
     public addPlayer(player: Player): void {
         this.playersService.getPlayerGames(player.id)
-            .subscribe(games => this.games = games);
+            .subscribe((games: Game[]) => {
+                this.games = this.getGames(games);
+                console.log(this.games);
+            });
 
-        this.players.push(player);
+            this.players.push(player);
+    }
+
+    private getGames(games: Game[]): Game[] {
+        if (this.games.length) {
+            const filteredGames = games.filter(game => this.gamesMap.has(game.appid));
+            this.updateGameMap(filteredGames);
+
+            return filteredGames;
+        }
+
+        this.updateGameMap(games);
+
+        return Array.from(this.gamesMap.values());
+    }
+
+    private updateGameMap(games): void {
+        this.gamesMap = new Map<number, Game>();
+        for (const game of games) {
+            this.gamesMap.set(game.appid, game);
+        }
     }
 
     public selectPlayer(player: Player): void {
