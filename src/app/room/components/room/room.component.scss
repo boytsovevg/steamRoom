@@ -9,10 +9,12 @@ section {
 
 .room__games {
     width: 100%;
-    max-width: 470px;
-    max-height: 100vh;
-    overflow-y: scroll;
     margin-right: 30px;
+
+    games-list {
+        display: flex;
+        overflow-y: scroll;
+    }
 }
 
 .room__players {
