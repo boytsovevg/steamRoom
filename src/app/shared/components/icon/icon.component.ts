@@ -23,6 +23,10 @@ export class IconComponent implements AfterContentInit {
         [Sizes.sm]: {
             height: 10,
             width: 10
+        },
+        [Sizes.md]: {
+            height: 15,
+            width: 15
         }
     };
 

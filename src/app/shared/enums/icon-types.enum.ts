@@ -1,3 +1,4 @@
 export enum IconTypes {
-    action = 'action'
+    action = 'action',
+    simple = 'simple'
 }

@@ -4,8 +4,20 @@
   [focusFirst]="true"
   (selectItem)="selectItem($event)"
   [resultTemplate]="resultItemTemplate"
+  [placeholder]="placeholder"
   type="text"
   class="form-control"
 />
-<!-- <object class="autosuggest__clear" type="image/svg+xml" data="image.svg"></object> -->
-<!-- <object class="autosuggest__magnifier" type="image/svg+xml" data="image.svg"></object> -->
+<steam-icon
+  [hidden]="!chosenItem"
+  class="cross"
+  name="cross"
+  type="action"
+  (click)="clearQuery()"
+  >
+</steam-icon>
+<steam-icon
+  class="magnifier"
+  size="md"
+  name="magnifier">
+</steam-icon>

@@ -1,5 +1,11 @@
-import { Component, EventEmitter, Output, Input, ContentChild, TemplateRef } from '@angular/core';
-
+import {
+  Component,
+  ContentChild,
+  EventEmitter,
+  Input,
+  Output,
+  TemplateRef
+} from '@angular/core';
 
 @Component({
   selector: 'steam-autosuggest',
@@ -11,11 +17,17 @@ export class AutosuggestComponent {
 
   @Input() items: any[];
   @Input() search: any;
+  @Input() placeholder = 'Start typing...';
   @Output() onItemSelect = new EventEmitter();
 
   @ContentChild(TemplateRef) resultItemTemplate;
 
   public selectItem({ item }): void {
     this.onItemSelect.emit(item);
+    this.clearQuery();
+  }
+
+  public clearQuery(): void {
+    this.chosenItem = null;
   }
 }

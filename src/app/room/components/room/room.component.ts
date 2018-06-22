@@ -36,6 +36,11 @@ export class RoomComponent {
     }
 
     private getFilteredGames(games: Game[]): Game[] {
+
+        if (!games.length) {
+            return [];
+        }
+
         if (this.games.length) {
             const filteredGames = games.filter(game => this.gamesMap.has(game.id));
             this.updateGameMap(filteredGames);
@@ -62,14 +67,9 @@ export class RoomComponent {
             debounceTime(500),
             distinctUntilChanged(),
             map(text => text.length < 2 ? [] :
-                this.games.filter(game => game.name.includes(text))
+                this.games.filter(game => game.name.toLowerCase().includes(text.toLowerCase()))
             )
         );
     }
-
-    public selectGame(game: Game): void {
-        console.log(game);
-    }
-
 
 }
