@@ -1,6 +1,8 @@
 <ul class="list-group">
   <game-item
     *ngFor="let game of games"
-    [game]="game">
+    [game]="game"
+    (click)="chooseGame(game)"
+  >
   </game-item>
 </ul>

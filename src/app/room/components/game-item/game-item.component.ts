@@ -15,14 +15,14 @@ export class GameItemComponent implements OnInit {
     constructor(private gamesDataService: GamesDataService) { }
 
     ngOnInit() {
-        this.gamesDataService.getGameDetails(this.game.id)
-            .subscribe(details => {
-                this.game = {
-                    ...this.game,
-                    ...details
-                };
+        // this.gamesDataService.getGameDetails(this.game.id)
+        //     .subscribe(details => {
+        //         this.game = {
+        //             ...this.game,
+        //             ...details
+        //         };
 
-                this.genre = this.game.genres.join(', ');
-            });
+        //         this.genre = this.game.genres.join(', ');
+        //     });
     }
 }

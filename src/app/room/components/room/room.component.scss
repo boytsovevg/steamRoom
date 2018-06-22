@@ -10,14 +10,11 @@ section {
 .room__games {
     width: 100%;
     max-width: 470px;
+    max-height: 100vh;
+    overflow-y: scroll;
     margin-right: 30px;
 }
 
 .room__players {
     width: 100%;
-    max-width: 450px;
-}
-
-steam-autosuggest {
-    width: 500px;
 }

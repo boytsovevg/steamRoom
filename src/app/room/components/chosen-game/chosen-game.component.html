@@ -2,6 +2,9 @@
 
 <div class="game-info">
   <steam-image
+    type="custom"
+    width="200"
+    height="100"
     [imageSource]="game.logo">
   </steam-image>
   <game-info
@@ -9,7 +12,7 @@
     [genre]="game.genre">
   </game-info>
   <players-count
-    [currentCount]="3"
+    [currentCount]="playersInRoom"
     [totalCount]="game.playersCount"
   >
   </players-count>

@@ -28,6 +28,10 @@ export class RoomComponent {
             this.players.push(player);
     }
 
+    public setChosenGame(game: Game): void {
+        this.chosenGame = game;
+    }
+
     private getFilteredGames(games: Game[]): Game[] {
         if (this.games.length) {
             const filteredGames = games.filter(game => this.gamesMap.has(game.id));

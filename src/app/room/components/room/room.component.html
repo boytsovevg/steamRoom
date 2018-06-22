@@ -1,6 +1,10 @@
 <section class="room__item"
     *ngIf="chosenGame">
-    <chosen-game [game]="chosenGame"></chosen-game>
+    <chosen-game
+        [game]="chosenGame"
+        [playersInRoom]="players.length"
+    >
+    </chosen-game>
 </section>
 
 <section class="room__item">
@@ -12,7 +16,10 @@
 <section>
     <div class="room__games" *ngIf="games.length && players.length > 1">
         <steam-text>Available games</steam-text>
-        <games-list [games]="games"></games-list>
+        <games-list
+            [games]="games"
+            (onGameChoose)="setChosenGame($event)"
+        ></games-list>
     </div>
     <div class="room__players" *ngIf="players.length">
         <steam-text>Players in room</steam-text>

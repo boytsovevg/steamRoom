@@ -9,4 +9,5 @@ import { Game } from '../../../core';
 export class ChosenGameComponent {
 
   @Input() game: Game;
+  @Input() playersInRoom: number;
 }
