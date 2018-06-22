@@ -6,7 +6,7 @@
     cursor: pointer;
 
     &:hover {
-        box-shadow: $shadow-card;
+        border-color: rgba($color: $border-color, $alpha: .3);
     }
 }
 

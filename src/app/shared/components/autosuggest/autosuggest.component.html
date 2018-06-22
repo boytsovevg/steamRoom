@@ -1,8 +1,8 @@
-<input
+<input #input
   [(ngModel)]="chosenItem"
   [ngbTypeahead]="search"
   [focusFirst]="true"
-  (selectItem)="selectItem($event)"
+  (selectItem)="selectItem($event, input)"
   [resultTemplate]="resultItemTemplate"
   [placeholder]="placeholder"
   type="text"

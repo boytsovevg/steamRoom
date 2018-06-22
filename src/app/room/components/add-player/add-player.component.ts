@@ -8,10 +8,10 @@ import { Player, PlayersDataService } from '../../../core';
 })
 export class AddPlayerComponent {
 
-    @Output() onPlayerAdd = new EventEmitter<Player>();
-
     public player: Player;
     public noResults = false;
+
+    @Output() onPlayerAdd = new EventEmitter<Player>();
 
     constructor(private playersService: PlayersDataService) { }
 

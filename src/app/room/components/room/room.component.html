@@ -20,7 +20,7 @@
         <steam-autosuggest
             [items]="games"
             [search]="getGames"
-            placeholder="Search by game name"
+            placeholder="Search by name"
             (onItemSelect)="setChosenGame($event)"
         >
             <ng-template let-game="result">

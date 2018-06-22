@@ -1,6 +1,13 @@
-<input
+<input #input
+  [(ngModel)]="inputText"
   [id]="id"
   type="text"
   class="form-control"
   [placeholder]="placeholder"
 />
+<steam-icon
+  [hidden]="!inputText"
+  name="cross"
+  (click)="clearQuery(input)"
+>
+</steam-icon>

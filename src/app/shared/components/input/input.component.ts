@@ -1,15 +1,18 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'steam-input',
-  templateUrl: './input.component.html',
-  styleUrls: ['./input.component.scss']
+    selector: 'steam-input',
+    templateUrl: './input.component.html',
+    styleUrls: ['./input.component.scss']
 })
-export class InputComponent implements OnInit {
+export class InputComponent {
 
-  @Input() id: string;
-  @Input() placeholder: string;
+    @Input() id: string;
+    @Input() placeholder: string;
 
-  ngOnInit() {
-  }
+    public inputText: string;
+
+    public clearQuery(): void {
+        this.inputText = null;
+    }
 }

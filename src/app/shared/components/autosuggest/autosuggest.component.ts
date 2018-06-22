@@ -4,6 +4,7 @@ import {
   EventEmitter,
   Input,
   Output,
+  Renderer2,
   TemplateRef
 } from '@angular/core';
 
@@ -22,8 +23,14 @@ export class AutosuggestComponent {
 
   @ContentChild(TemplateRef) resultItemTemplate;
 
-  public selectItem({ item }): void {
-    this.onItemSelect.emit(item);
+  constructor(private renderer: Renderer2) { }
+
+  public selectItem($event, input: HTMLInputElement): void {
+    $event.preventDefault();
+
+    this.onItemSelect.emit($event.item);
+    this.renderer.setProperty(input, 'value', '');
+
     this.clearQuery();
   }
 
