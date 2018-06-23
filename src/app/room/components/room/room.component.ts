@@ -1,7 +1,4 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs';
-import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
-
 import { Game, Player, PlayersDataService } from '../../../core';
 
 @Component({
@@ -57,16 +54,4 @@ export class RoomComponent {
             this.gamesMap.set(game.id, game);
         }
     }
-
-    public getGames = ($gameName: Observable<string>): Observable<Game[]> => {
-
-        return $gameName.pipe(
-            debounceTime(500),
-            distinctUntilChanged(),
-            map(text => text.length < 2 ? [] :
-                this.games.filter(game => game.name.toLowerCase().includes(text.toLowerCase()))
-            )
-        );
-    }
-
 }

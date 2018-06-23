@@ -1,0 +1,17 @@
+<steam-text>Available games</steam-text>
+
+<steam-autosuggest
+    [items]="games"
+    [search]="getGames"
+    placeholder="Search by name"
+    (onItemSelect)="selectGame($event)"
+>
+    <ng-template let-game="result">
+        <game-item [game]="game"></game-item>
+    </ng-template>
+</steam-autosuggest>
+
+<games-list
+    [games]="games"
+    (onGameChoose)="selectGame($event)"
+></games-list>

@@ -12,7 +12,8 @@ import {
   PlayerCardComponent,
   PlayerItemComponent,
   PlayersCountComponent,
-  RoomComponent
+  RoomComponent,
+  RoomGamesComponent
 } from './components';
 
 
@@ -31,6 +32,7 @@ import {
     PlayerCardComponent,
     PlayersCountComponent,
     RoomComponent,
+    RoomGamesComponent,
   ],
   exports: [
     RoomComponent,

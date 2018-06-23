@@ -20,25 +20,12 @@
 </section>
 
 <section>
-    <div class="room__games" *ngIf="games.length">
-        <steam-text>Available games</steam-text>
+    <room-games *ngIf="games.length"
+        [games]="games"
+        (onGameSelect)="setChosenGame($event)"
+    >
+    </room-games>
 
-        <steam-autosuggest
-            [items]="games"
-            [search]="getGames"
-            placeholder="Search by name"
-            (onItemSelect)="setChosenGame($event)"
-        >
-            <ng-template let-game="result">
-                <game-item [game]="game"></game-item>
-            </ng-template>
-        </steam-autosuggest>
-
-        <games-list
-            [games]="games"
-            (onGameChoose)="setChosenGame($event)"
-        ></games-list>
-    </div>
     <div class="room__players" *ngIf="players.length">
         <steam-text>Players in room</steam-text>
         <steam-grid>

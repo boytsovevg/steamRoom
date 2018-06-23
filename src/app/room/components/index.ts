@@ -7,3 +7,4 @@ export * from './player-item/player-item.component';
 export * from './player-card/player-card.component';
 export * from './players-count/players-count.component';
 export * from './room/room.component';
+export * from './room-games/room-games.component';
