@@ -1,0 +1,9 @@
+:host {
+    display: block;
+    width: 100%;
+
+    stea-grid {
+        max-height: 600px;
+        overflow-y: scroll;
+    }
+}

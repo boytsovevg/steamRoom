@@ -26,13 +26,8 @@
     >
     </room-games>
 
-    <div class="room__players" *ngIf="players.length">
-        <steam-text>Players in room</steam-text>
-        <steam-grid>
-            <player-card
-                *ngFor="let player of players"
-                [player]="player">
-            </player-card>
-        </steam-grid>
-    </div>
+    <room-players *ngIf="players.length"
+        [players]="players"
+    >
+    </room-players>
 </section>

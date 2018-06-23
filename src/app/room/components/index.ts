@@ -8,3 +8,4 @@ export * from './player-card/player-card.component';
 export * from './players-count/players-count.component';
 export * from './room/room.component';
 export * from './room-games/room-games.component';
+export * from './room-players/room-players.component';

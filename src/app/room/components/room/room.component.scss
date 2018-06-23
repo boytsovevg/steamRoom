@@ -6,27 +6,3 @@ section {
     margin-bottom: 30px;
     align-items: center;
 }
-
-.room__games {
-    width: 100%;
-    margin-right: 30px;
-
-    steam-autosuggest {
-        margin-bottom: 10px;
-    }
-
-    games-list {
-        display: flex;
-        max-height: 600px;
-        overflow-y: scroll;
-    }
-}
-
-.room__players {
-    width: 100%;
-
-    stea-grid {
-        max-height: 600px;
-        overflow-y: scroll;
-    }
-}
