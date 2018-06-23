@@ -33,6 +33,16 @@ export class RoomComponent {
         this.chosenGame = game;
     }
 
+    public clearPlayers(): void {
+        this.players = [];
+        this.games = [];
+        this.gamesMap = null;
+    }
+
+    public deletePlayer(playerIndex: number): void {
+        this.players.splice(playerIndex, 1);
+    }
+
     private getFilteredGames(games: Game[]): Game[] {
 
         if (this.gamesMap && games.length) {

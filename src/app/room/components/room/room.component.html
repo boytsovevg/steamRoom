@@ -28,6 +28,8 @@
 
     <room-players *ngIf="players.length"
         [players]="players"
+        (onPlayersClear)="clearPlayers($event)"
+        (onPlayerDelete)="deletePlayer($event)"
     >
     </room-players>
 </section>

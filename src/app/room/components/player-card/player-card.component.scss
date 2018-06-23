@@ -13,3 +13,8 @@
 .card-body {
     @include ellipsis(100%);
 }
+
+steam-icon {
+    position: absolute;
+    right: 5px;
+}

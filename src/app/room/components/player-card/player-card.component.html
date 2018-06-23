@@ -1,9 +1,15 @@
 <div class="card">
     <steam-image
-      imageClass="card-img-top"
-      [imageSource]="player.avatar.full">
+        imageClass="card-img-top"
+        [imageSource]="player.avatar.full">
     </steam-image>
     <div class="card-body">
-      <steam-text>{{ player.nickname }}</steam-text>
+        <steam-text>{{ player.nickname }}</steam-text>
     </div>
+    <steam-icon
+        name="cross"
+        type="action"
+        (click)="deleteCard()"
+    >
+    </steam-icon>
 </div>
