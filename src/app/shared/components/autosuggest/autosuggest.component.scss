@@ -15,7 +15,7 @@
 
     &:focus {
         border-color: $border-color;
-        box-shadow: 0 0 0 1px rgba(255, 255, 255, .5);
+        box-shadow: 0 0 0 1px rgba($color: $font-white, $alpha: .5);
     }
 }
 
@@ -33,11 +33,15 @@ steam-icon {
 }
 
 ::ng-deep .dropdown-menu {
+    max-height: 400px;
+    overflow-y: scroll;
     width: 100%;
     padding: 0;
 
     .dropdown-item {
         cursor: pointer;
+        color: $font-white;
+        background-color: $background-light-blue;
 
         &.active {
             background-color: $background-card;
