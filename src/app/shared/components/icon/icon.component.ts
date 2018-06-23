@@ -10,7 +10,7 @@ import { Size } from '../../models';
 export class IconComponent implements AfterContentInit {
 
     @Input() name: string;
-    @Input() type?: IconTypes = IconTypes.action;
+    @Input() type?: IconTypes = IconTypes.simple;
     @Input() size?: Sizes = Sizes.sm;
 
     public iconHeight: number;

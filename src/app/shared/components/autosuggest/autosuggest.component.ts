@@ -29,12 +29,11 @@ export class AutosuggestComponent {
     $event.preventDefault();
 
     this.onItemSelect.emit($event.item);
-    this.renderer.setProperty(input, 'value', '');
-
-    this.clearQuery();
+    this.clearQuery(input);
   }
 
-  public clearQuery(): void {
+  public clearQuery(input?: HTMLInputElement): void {
     this.chosenItem = null;
+    this.renderer.setValue(input, '');
   }
 }

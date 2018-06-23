@@ -1,6 +1,9 @@
-<steam-description>
-    {{ description }}
-</steam-description>
+<steam-text size="25px">
+    {{ name }}
+</steam-text>
 <steam-text size="20px">
     {{ genre }}
+</steam-text>
+<steam-text size="20px">
+    multiplayer: {{ hasMultiplayer && 'Yes' || 'No' }}
 </steam-text>

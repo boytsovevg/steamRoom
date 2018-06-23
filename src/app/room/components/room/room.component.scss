@@ -17,10 +17,16 @@ section {
 
     games-list {
         display: flex;
+        max-height: 600px;
         overflow-y: scroll;
     }
 }
 
 .room__players {
     width: 100%;
+
+    stea-grid {
+        max-height: 600px;
+        overflow-y: scroll;
+    }
 }

@@ -1,5 +1,3 @@
-<steam-title [title]="game.name"></steam-title>
-
 <div class="game-info">
   <steam-image
     type="custom"
@@ -8,12 +6,8 @@
     [imageSource]="game.logo">
   </steam-image>
   <game-info
-    [description]="game.description"
-    [genre]="game.genre">
+    [name]="game.name"
+    [genre]="genre"
+    [hasMultiplayer]="game.hasMultiplayer">
   </game-info>
-  <players-count
-    [currentCount]="playersInRoom"
-    [totalCount]="game.playersCount"
-  >
-  </players-count>
 </div>
