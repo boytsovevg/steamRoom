@@ -25,6 +25,7 @@ export class RoomComponent {
     public addPlayer(player: Player): void {
         this.playersService.getPlayerGames(player.id)
             .subscribe((games: Game[]) => {
+                player.games = games;
                 this.games = this.getFilteredGames(games);
             });
 
@@ -37,11 +38,7 @@ export class RoomComponent {
 
     private getFilteredGames(games: Game[]): Game[] {
 
-        if (!games.length) {
-            return [];
-        }
-
-        if (this.games.length) {
+        if (this.gamesMap && games.length) {
             const filteredGames = games.filter(game => this.gamesMap.has(game.id));
             this.updateGameMap(filteredGames);
 
@@ -50,7 +47,7 @@ export class RoomComponent {
 
         this.updateGameMap(games);
 
-        return Array.from(this.gamesMap.values());
+        return [];
     }
 
     private updateGameMap(games): void {

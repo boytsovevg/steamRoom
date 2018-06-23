@@ -5,7 +5,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import {
   AutosuggestComponent,
-  ButtonComponent,
   DescriptionComponent,
   FilledCountComponent,
   GridComponent,
@@ -25,7 +24,6 @@ import {
   ],
   declarations: [
     AutosuggestComponent,
-    ButtonComponent,
     DescriptionComponent,
     FilledCountComponent,
     GridComponent,
@@ -39,7 +37,6 @@ import {
     FormsModule,
     NgbModule,
     AutosuggestComponent,
-    ButtonComponent,
     DescriptionComponent,
     FilledCountComponent,
     GridComponent,

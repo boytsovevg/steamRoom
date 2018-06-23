@@ -1,4 +1,4 @@
-<input #input
+<input
   [(ngModel)]="inputText"
   [id]="id"
   type="text"
@@ -8,6 +8,6 @@
 <steam-icon
   [hidden]="!inputText"
   name="cross"
-  (click)="clearQuery(input)"
+  (click)="clearQuery()"
 >
 </steam-icon>
