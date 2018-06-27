@@ -6,7 +6,7 @@
 >
 </steam-input>
 
-<div *ngIf="player"
+<div *ngIf="player$ | async as player"
   class="player__results">
   <player-item
     [player]="player"
