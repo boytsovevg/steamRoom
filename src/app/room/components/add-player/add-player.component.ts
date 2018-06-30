@@ -10,7 +10,6 @@ import { Player, PlayersDataService } from '../../../core';
 })
 export class AddPlayerComponent {
 
-    public player$: Observable<Player>;
     public noResults = false;
     public isLoading: boolean;
 
@@ -22,9 +21,7 @@ export class AddPlayerComponent {
     public getPlayerByName(event: any): void {
 
         this.isLoading = true;
-        this.player$ = this.playersService.getPlayerByName(event.target.value);
-
-        this.player$
+        this.playersService.getPlayerByName(event.target.value)
             .subscribe(player => {
 
                 this.isLoading = false;
@@ -41,6 +38,6 @@ export class AddPlayerComponent {
 
     public addPlayer(): void {
         this.onPlayerAdd.emit(this.player);
-        this.player$ = null;
+        this.player = null;
     }
 }
