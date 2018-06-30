@@ -11,12 +11,10 @@ export class LoadingService {
     public loadingState = this.loadingSubject.asObservable();
 
     public start(): void {
-        console.log('loading start');
         this.loadingSubject.next(<Loading>{isLoading: true});
     }
 
     public end(): void {
-        console.log('loading end');
         this.loadingSubject.next(<Loading>{isLoading: false});
     }
 }

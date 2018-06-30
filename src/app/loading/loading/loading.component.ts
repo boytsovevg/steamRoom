@@ -1,7 +1,7 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, HostBinding } from '@angular/core';
 import { Subscription } from 'rxjs';
 
-import { LoadingService } from './../loading.service';
+import { LoadingService } from '../loading.service';
 import { Loading } from '../loading.model';
 
 
@@ -10,11 +10,14 @@ import { Loading } from '../loading.model';
     styleUrls: ['./loading.component.scss'],
     template: `
         <div [hidden]="!isLoading"
+            [class.loading_fullscreen]="fullscreen"
             class="loading">
         </div>
     `
 })
 export class LoadingComponent implements OnInit, OnDestroy {
+
+    @Input() fullscreen?: boolean;
 
     public isLoading = false;
     private loadingSubscription: Subscription;
@@ -22,6 +25,7 @@ export class LoadingComponent implements OnInit, OnDestroy {
     constructor(private loadingService: LoadingService) { }
 
     ngOnInit(): void {
+
         this.loadingSubscription = this.loadingService.loadingState
             .subscribe((state: Loading) => {
                 this.isLoading = state.isLoading;
