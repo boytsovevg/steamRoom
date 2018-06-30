@@ -1,4 +1,4 @@
-import { Component, Input, HostBinding, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'steam-loading',
@@ -7,8 +7,4 @@ import { Component, Input, HostBinding, OnInit } from '@angular/core';
       <div class="loading"></div>
     `
 })
-export class LoadingComponent {
-
-    @Input() width: number;
-    @Input() height: number;
-}
+export class LoadingComponent { }

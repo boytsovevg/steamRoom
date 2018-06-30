@@ -12,6 +12,7 @@ export class AddPlayerComponent {
 
     public player$: Observable<Player>;
     public noResults = false;
+    public isLoading: boolean;
 
     private player: Player;
     @Output() onPlayerAdd = new EventEmitter<Player>();
@@ -20,17 +21,22 @@ export class AddPlayerComponent {
 
     public getPlayerByName(event: any): void {
 
+        this.isLoading = true;
         this.player$ = this.playersService.getPlayerByName(event.target.value);
 
-        this.player$.subscribe(player => {
-            if (!player) {
-                this.noResults = true;
-                return null;
-            }
+        this.player$
+            .subscribe(player => {
 
-            this.noResults = false;
-            this.player = player;
-        });
+                this.isLoading = false;
+
+                if (!player) {
+                    this.noResults = true;
+                    return null;
+                }
+
+                this.noResults = false;
+                this.player = player;
+            });
     }
 
     public addPlayer(): void {

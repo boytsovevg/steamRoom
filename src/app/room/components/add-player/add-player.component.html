@@ -21,6 +21,8 @@
   </steam-icon>
 </div>
 
+<steam-loading *ngIf="isLoading"></steam-loading>
+
 <div *ngIf="noResults">
   Player not found
 </div>
