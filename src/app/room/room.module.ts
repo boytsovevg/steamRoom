@@ -1,3 +1,4 @@
+import { LoadingModule } from './../loading/loading.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -22,6 +23,7 @@ import {
 @NgModule({
   imports: [
     CommonModule,
+    LoadingModule,
     SharedModule
   ],
   declarations: [

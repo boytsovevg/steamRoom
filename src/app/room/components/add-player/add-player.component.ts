@@ -11,8 +11,6 @@ import { Player, PlayersDataService } from '../../../core';
 export class AddPlayerComponent {
 
     public noResults = false;
-    public isLoading: boolean;
-
     private player: Player;
     @Output() onPlayerAdd = new EventEmitter<Player>();
 
@@ -20,11 +18,8 @@ export class AddPlayerComponent {
 
     public getPlayerByName(event: any): void {
 
-        this.isLoading = true;
         this.playersService.getPlayerByName(event.target.value)
             .subscribe(player => {
-
-                this.isLoading = false;
 
                 if (!player) {
                     this.noResults = true;

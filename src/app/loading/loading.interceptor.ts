@@ -10,7 +10,7 @@ import {
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { LoadingService } from './../services/loading.service';
+import { LoadingService } from './loading.service';
 
 
 @Injectable()
