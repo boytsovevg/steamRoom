@@ -37,6 +37,7 @@ export class RoomComponent {
         this.players = [];
         this.games = [];
         this.gamesMap = null;
+        this.chosenGame = null;
     }
 
     public deletePlayer(playerIndex: number): void {

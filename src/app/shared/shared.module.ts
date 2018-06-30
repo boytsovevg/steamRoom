@@ -11,6 +11,7 @@ import {
   IconComponent,
   InputComponent,
   ImageComponent,
+  LoadingComponent,
   TextComponent,
   TitleComponent
 } from './components';
@@ -30,6 +31,7 @@ import {
     IconComponent,
     InputComponent,
     ImageComponent,
+    LoadingComponent,
     TextComponent,
     TitleComponent,
   ],
@@ -43,6 +45,7 @@ import {
     IconComponent,
     InputComponent,
     ImageComponent,
+    LoadingComponent,
     TextComponent,
     TitleComponent,
   ]
