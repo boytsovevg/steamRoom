@@ -19,7 +19,7 @@ import { LoadingComponent } from './loading/loading.component';
           }
     ],
     exports: [
-
+        LoadingComponent
     ]
 })
 export class LoadingModule {
