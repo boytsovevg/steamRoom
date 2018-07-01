@@ -46,34 +46,25 @@ export class RoomComponent {
     public deletePlayer(playerIndex: number): void {
         this.players.splice(playerIndex, 1);
 
-        const uniqGames = this.arrayService.getUniqBy(
+        this.games = this.arrayService.getUniqBy(
             this.players.map(player => player.games),
             'id'
         );
 
-        this.updateGameMap(uniqGames);
-        this.games = uniqGames;
+        this.gamesMap = this.arrayService.getMap(this.games, 'id');
     }
 
     private getFilteredGames(games: Game[]): Game[] {
 
         if (this.gamesMap && games.length) {
             const filteredGames = games.filter(game => this.gamesMap.has(game.id));
-            this.updateGameMap(filteredGames);
+            this.gamesMap = this.arrayService.getMap(filteredGames, 'id');
 
             return filteredGames;
         }
 
-        this.updateGameMap(games);
+        this.gamesMap = this.arrayService.getMap(games, 'id');
 
         return[];
-    }
-
-    private updateGameMap(games): void {
-        this.gamesMap = new Map<number, Game>();
-
-        for (const game of games) {
-            this.gamesMap.set(game.id, game);
-        }
     }
 }
