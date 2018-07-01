@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Game, Player, PlayersDataService } from '../../../core';
+import { Game, Player, PlayersDataService, ArrayService } from '../../../core';
 
 @Component({
     selector: 'steam-room',
@@ -17,7 +17,10 @@ export class RoomComponent {
 
     private gamesMap: Map<number, Game>;
 
-    constructor(private playersService: PlayersDataService) {}
+    constructor(
+        private arrayService: ArrayService,
+        private playersService: PlayersDataService
+    ) {}
 
     public addPlayer(player: Player): void {
         this.playersService.getPlayerGames(player.id)
@@ -42,6 +45,14 @@ export class RoomComponent {
 
     public deletePlayer(playerIndex: number): void {
         this.players.splice(playerIndex, 1);
+
+        const uniqGames = this.arrayService.getUniqBy(
+            this.players.map(player => player.games),
+            'id'
+        );
+
+        this.updateGameMap(uniqGames);
+        this.games = uniqGames;
     }
 
     private getFilteredGames(games: Game[]): Game[] {
@@ -55,7 +66,7 @@ export class RoomComponent {
 
         this.updateGameMap(games);
 
-        return [];
+        return[];
     }
 
     private updateGameMap(games): void {

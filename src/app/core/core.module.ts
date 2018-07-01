@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
 import { GamesDataService, PlayersDataService } from './data-services';
+import { ArrayService } from './services';
 
 @NgModule({
   imports: [
@@ -10,6 +11,7 @@ import { GamesDataService, PlayersDataService } from './data-services';
     HttpClientModule,
   ],
   providers: [
+    ArrayService,
     GamesDataService,
     PlayersDataService,
   ],
@@ -20,6 +22,7 @@ export class CoreModule {
     return {
       ngModule: CoreModule,
       providers: [
+        ArrayService,
         GamesDataService,
         PlayersDataService,
       ]
