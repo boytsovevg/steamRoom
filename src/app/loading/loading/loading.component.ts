@@ -28,7 +28,7 @@ export class LoadingComponent implements OnInit, OnDestroy {
 
         this.loadingSubscription = this.loadingService.loadingState
             .subscribe((state: Loading) => {
-                this.isLoading = state.isLoading;
+                Promise.resolve(null).then(() => this.isLoading = state.isLoading);
             });
     }
 
