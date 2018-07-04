@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 
@@ -9,15 +9,10 @@ import { Game } from '../../../core';
     templateUrl: './room-games.component.html',
     styleUrls: ['./room-games.component.scss']
 })
-export class RoomGamesComponent implements OnInit {
+export class RoomGamesComponent {
 
     @Input() games: Game[];
-    @Output() onGameSelect = new EventEmitter<Game>();
-
-    constructor() { }
-
-    ngOnInit() {
-    }
+    @Output() gameSelect = new EventEmitter<Game>();
 
     public getGames = ($gameName: Observable<string>): Observable<Game[]> => {
 
@@ -31,7 +26,7 @@ export class RoomGamesComponent implements OnInit {
     }
 
     selectGame(game: Game): void {
-        this.onGameSelect.emit(game);
+        this.gameSelect.emit(game);
     }
 
 }

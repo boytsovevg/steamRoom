@@ -12,7 +12,7 @@ export class AddPlayerComponent {
 
     public noResults = false;
     private player: Player;
-    @Output() onPlayerAdd = new EventEmitter<Player>();
+    @Output() playerAdd = new EventEmitter<Player>();
 
     constructor(private playersService: PlayersDataService) { }
 
@@ -32,7 +32,7 @@ export class AddPlayerComponent {
     }
 
     public addPlayer(): void {
-        this.onPlayerAdd.emit(this.player);
+        this.playerAdd.emit(this.player);
         this.player = null;
     }
 }

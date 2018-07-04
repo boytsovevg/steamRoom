@@ -9,14 +9,14 @@ import { Player } from '../../../core';
 export class RoomPlayersComponent {
 
     @Input() players: Player[];
-    @Output() onPlayersClear = new EventEmitter<void>();
-    @Output() onPlayerDelete = new EventEmitter<number>();
+    @Output() playersClear = new EventEmitter<void>();
+    @Output() playerDelete = new EventEmitter<number>();
 
     public clearPlayers(): void {
-        this.onPlayersClear.emit();
+        this.playersClear.emit();
     }
 
     public deletePlayer(playerIndex: number): void {
-        this.onPlayerDelete.emit(playerIndex);
+        this.playerDelete.emit(playerIndex);
     }
 }
