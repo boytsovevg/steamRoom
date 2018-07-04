@@ -10,9 +10,9 @@ export class PlayerCardComponent {
 
     @Input() player: Player;
     @Input() playerIndex: number;
-    @Output() onPlayerDelete = new EventEmitter<number>();
+    @Output() playerDelete = new EventEmitter<number>();
 
     public deleteCard(): void {
-        this.onPlayerDelete.emit(this.playerIndex);
+        this.playerDelete.emit(this.playerIndex);
     }
 }

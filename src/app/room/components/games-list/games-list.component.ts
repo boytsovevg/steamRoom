@@ -9,9 +9,9 @@ import { Game, GameItem } from '../../../core';
 export class GamesListComponent {
 
     @Input() games: GameItem[];
-    @Output() onGameChoose = new EventEmitter<Game>();
+    @Output() gameChoose = new EventEmitter<Game>();
 
     public chooseGame(game: Game): void {
-        this.onGameChoose.emit(game);
+        this.gameChoose.emit(game);
     }
 }

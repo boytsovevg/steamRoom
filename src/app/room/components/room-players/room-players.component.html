@@ -14,7 +14,7 @@
     <player-card
         *ngFor="let player of players; let i = index"
         [playerIndex]="i"
-        (onPlayerDelete)="deletePlayer($event)"
+        (playerDelete)="onPlayerDelete($event)"
         [player]="player">
     </player-card>
 </steam-grid>

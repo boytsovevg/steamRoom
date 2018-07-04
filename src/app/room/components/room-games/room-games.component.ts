@@ -25,7 +25,7 @@ export class RoomGamesComponent {
         );
     }
 
-    selectGame(game: Game): void {
+    onGameSelect(game: Game): void {
         this.gameSelect.emit(game);
     }
 

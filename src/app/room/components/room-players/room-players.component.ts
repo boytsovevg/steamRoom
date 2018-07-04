@@ -16,7 +16,7 @@ export class RoomPlayersComponent {
         this.playersClear.emit();
     }
 
-    public deletePlayer(playerIndex: number): void {
+    public onPlayerDelete(playerIndex: number): void {
         this.playerDelete.emit(playerIndex);
     }
 }
