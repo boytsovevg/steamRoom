@@ -2,7 +2,7 @@
   [(ngModel)]="chosenItem"
   [ngbTypeahead]="search"
   [focusFirst]="true"
-  (selectItem)="selectItem($event, input)"
+  (selectItem)="onItemSelect($event, input)"
   [resultTemplate]="resultItemTemplate"
   [placeholder]="placeholder"
   type="text"

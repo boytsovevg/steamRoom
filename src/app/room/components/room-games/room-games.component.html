@@ -4,7 +4,7 @@
     [items]="games"
     [search]="getGames"
     placeholder="Search by name"
-    (onItemSelect)="selectGame($event)"
+    (itemSelect)="onGameSelect($event)"
 >
     <ng-template let-game="result">
         <game-search-result [game]="game"></game-search-result>
