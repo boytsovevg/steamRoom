@@ -1,0 +1,50 @@
+@import '../../../../styles/variables';
+
+:host {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.form-control {
+    min-width: 300px;
+    padding: 10px 15px;
+    border-color: #1b2838;
+    background-color: #2a2f36;
+    color: $font-green;
+
+    &:focus {
+        border-color: $border-color;
+        box-shadow: 0 0 0 1px rgba($color: $font-white, $alpha: .5);
+    }
+}
+
+steam-icon {
+    position: absolute;
+    top: 10px;
+
+    &.cross {
+        right: 45px;
+    }
+
+    &.magnifier {
+        right: 18px;
+    }
+}
+
+::ng-deep .dropdown-menu {
+    max-height: 400px;
+    overflow-y: scroll;
+    width: 100%;
+    padding: 0;
+
+    .dropdown-item {
+        cursor: pointer;
+        color: $font-white;
+        background-color: $background-light-blue;
+
+        &.active {
+            background-color: $background-card;
+        }
+    }
+}

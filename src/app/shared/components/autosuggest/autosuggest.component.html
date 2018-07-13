@@ -1,0 +1,23 @@
+<input #input
+  [(ngModel)]="chosenItem"
+  [ngbTypeahead]="search"
+  [focusFirst]="true"
+  (selectItem)="onItemSelect($event, input)"
+  [resultTemplate]="resultItemTemplate"
+  [placeholder]="placeholder"
+  type="text"
+  class="form-control"
+/>
+<steam-icon
+  [hidden]="!chosenItem"
+  class="cross"
+  name="cross"
+  type="action"
+  (click)="clearQuery(input)"
+  >
+</steam-icon>
+<steam-icon
+  class="magnifier"
+  size="md"
+  name="magnifier">
+</steam-icon>

@@ -1,0 +1,26 @@
+<label for="add-player">Add player</label>
+<steam-input
+  id="for-player"
+  placeholder="Search by nickname"
+  (keyup.enter)="getPlayerByName($event)"
+>
+</steam-input>
+
+<div *ngIf="player"
+  class="player__results">
+  <player-item
+    [player]="player"
+  ></player-item>
+
+  <steam-icon
+    name="add"
+    size="md"
+    type="action"
+    (click)="addPlayer()"
+  >
+  </steam-icon>
+</div>
+
+<div *ngIf="noResults">
+  Player not found
+</div>

@@ -1,0 +1,20 @@
+<div class="room-players__header">
+    <steam-text>Players in room</steam-text>
+
+    <steam-icon
+        [hidden]="players.length < 2"
+        class="cross"
+        name="cross"
+        type="action"
+        (click)="clearPlayers()"
+    >
+    </steam-icon>
+</div>
+<steam-grid>
+    <player-card
+        *ngFor="let player of players; let i = index"
+        [playerIndex]="i"
+        (playerDelete)="onPlayerDelete($event)"
+        [player]="player">
+    </player-card>
+</steam-grid>

@@ -1,0 +1,20 @@
+@import '../../../../styles/variables';
+
+.list-group-item {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background-color: $background-card;
+    cursor: pointer;
+
+    &:hover {
+        border-color: rgba($color: $border-color, $alpha: .3);
+    }
+}
+
+.game__info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}

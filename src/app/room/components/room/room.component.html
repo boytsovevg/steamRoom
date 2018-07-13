@@ -1,0 +1,35 @@
+<section class="room__item">
+    <steam-title
+        title="Room 21">
+    </steam-title>
+</section>
+
+<section class="room__item"
+    *ngIf="chosenGame">
+    <chosen-game
+        [game]="chosenGame"
+        [playersInRoom]="players.length"
+    >
+    </chosen-game>
+</section>
+
+<section class="room__item">
+    <add-player
+        (playerAdd)="onPlayerAdd($event)"
+    ></add-player>
+</section>
+
+<section>
+    <room-games *ngIf="games.length"
+        [games]="games"
+        (gameSelect)="onGameChoose($event)"
+    >
+    </room-games>
+
+    <room-players *ngIf="players.length"
+        [players]="players"
+        (playersClear)="onPlayersClear($event)"
+        (playerDelete)="onPlayerDelete($event)"
+    >
+    </room-players>
+</section>

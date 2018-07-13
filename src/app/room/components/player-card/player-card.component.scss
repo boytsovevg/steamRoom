@@ -1,0 +1,20 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/mixins';
+
+.card {
+    background-color: $background-card;
+    cursor: pointer;
+
+    &:hover {
+        border-color: rgba($color: $border-color, $alpha: .3);
+    }
+}
+
+.card-body {
+    @include ellipsis(100%);
+}
+
+steam-icon {
+    position: absolute;
+    right: 5px;
+}

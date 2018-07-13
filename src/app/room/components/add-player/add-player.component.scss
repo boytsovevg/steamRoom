@@ -1,0 +1,9 @@
+.player__results {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+
+    steam-icon {
+        margin-right: 10px;
+    }
+}

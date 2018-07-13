@@ -1,0 +1,18 @@
+<li class="list-group-item">
+  <steam-image
+    type="custom"
+    width="200"
+    height="100"
+    [imageSource]="game.logo"
+  >
+  </steam-image>
+  <div class="game__info">
+    <steam-text
+      [title]="game.name"
+      maxWidth="200px"
+    >{{ game.name }}</steam-text>
+    <steam-text>
+      {{ genre }}
+    </steam-text>
+  </div>
+</li>

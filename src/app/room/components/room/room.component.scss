@@ -1,0 +1,12 @@
+section {
+    display: flex;
+}
+
+.room__item {
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+room-players {
+    max-width: 400px;
+}

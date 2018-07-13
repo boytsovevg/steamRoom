@@ -1,0 +1,28 @@
+@import './variables';
+
+// Responsive fonts
+:root {
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    :root {
+      font-size: 14px;
+    }
+}
+
+@media (min-width: 992px) {
+    :root {
+      font-size: 16px;
+    }
+}
+
+@media (min-width: 1200px) {
+    :root {
+      font-size: 18px;
+    }
+}
+
+body {
+    background-color: $background-black;
+}

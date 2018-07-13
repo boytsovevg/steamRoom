@@ -1,0 +1,16 @@
+:host {
+    display: block;
+    width: 100%;
+
+    steam-grid {
+        max-height: 600px;
+        overflow-y: scroll;
+    }
+}
+
+.room-players__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
