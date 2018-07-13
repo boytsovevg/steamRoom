@@ -37,8 +37,8 @@ export class ArrayService {
         return arrays.reduce((small: any[], item: any[]) => {
 
             const lengths = arrays.map(el => el.length);
-            if (item.length === Math.min(...lengths)) {
 
+            if (item.length === Math.min(...lengths)) {
                 small = item;
             }
 

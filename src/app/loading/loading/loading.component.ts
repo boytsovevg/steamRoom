@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, Input, HostBinding } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { LoadingService } from '../loading.service';
