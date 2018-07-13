@@ -15,21 +15,21 @@
 
 <section class="room__item">
     <add-player
-        (onPlayerAdd)="addPlayer($event)"
+        (playerAdd)="onPlayerAdd($event)"
     ></add-player>
 </section>
 
 <section>
     <room-games *ngIf="games.length"
         [games]="games"
-        (onGameSelect)="setChosenGame($event)"
+        (gameSelect)="onGameChoose($event)"
     >
     </room-games>
 
     <room-players *ngIf="players.length"
         [players]="players"
-        (onPlayersClear)="clearPlayers($event)"
-        (onPlayerDelete)="deletePlayer($event)"
+        (playersClear)="onPlayersClear($event)"
+        (playerDelete)="onPlayerDelete($event)"
     >
     </room-players>
 </section>

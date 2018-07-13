@@ -22,7 +22,7 @@ export class RoomComponent {
         private playersService: PlayersDataService
     ) {}
 
-    public addPlayer(player: Player): void {
+    public onPlayerAdd(player: Player): void {
         this.playersService.getPlayerGames(player.id)
             .subscribe((games: Game[]) => {
                 player.games = games;
@@ -32,18 +32,18 @@ export class RoomComponent {
             this.players.push(player);
     }
 
-    public setChosenGame(game: Game): void {
+    public onGameChoose(game: Game): void {
         this.chosenGame = game;
     }
 
-    public clearPlayers(): void {
+    public onPlayersClear(): void {
         this.players = [];
         this.games = [];
         this.gamesMap = null;
         this.chosenGame = null;
     }
 
-    public deletePlayer(playerIndex: number): void {
+    public onPlayerDelete(playerIndex: number): void {
         this.players.splice(playerIndex, 1);
 
         this.games = this.arrayService.getUniqBy(

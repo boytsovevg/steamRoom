@@ -19,16 +19,16 @@ export class AutosuggestComponent {
   @Input() items: any[];
   @Input() search: any;
   @Input() placeholder = 'Start typing...';
-  @Output() onItemSelect = new EventEmitter();
+  @Output() itemSelect = new EventEmitter();
 
   @ContentChild(TemplateRef) resultItemTemplate;
 
   constructor(private renderer: Renderer2) { }
 
-  public selectItem($event, input: HTMLInputElement): void {
+  public onItemSelect($event, input: HTMLInputElement): void {
     $event.preventDefault();
 
-    this.onItemSelect.emit($event.item);
+    this.itemSelect.emit($event.item);
     this.clearQuery(input);
   }
 
